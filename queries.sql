@@ -38,34 +38,27 @@ INSERT INTO sales_data VALUES
 (1024,'2025-02-01','Pune','Keyboard','Accessories',5,1500),
 (1025,'2025-02-02','Nagpur','Laptop','Electronics',1,50000);
 
--- 1. Display all records
 SELECT * FROM sales_data;
 
--- 2. Total revenue
 SELECT SUM(quantity * price) AS total_revenue FROM sales_data;
 
--- 3. Top-selling product
 SELECT product, SUM(quantity) AS total_qty
 FROM sales_data
 GROUP BY product
 ORDER BY total_qty DESC
 LIMIT 1;
 
--- 4. City-wise revenue
 SELECT city, SUM(quantity * price) AS revenue
 FROM sales_data
 GROUP BY city;
 
--- 5. Category-wise revenue
 SELECT category, SUM(quantity * price) AS revenue
 FROM sales_data
 GROUP BY category;
 
--- 6. Highest value order
 SELECT *, (quantity * price) AS total
 FROM sales_data
 ORDER BY total DESC
 LIMIT 1;
 
--- 7. Average price
 SELECT AVG(price) AS avg_price FROM sales_data;
