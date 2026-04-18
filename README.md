@@ -67,12 +67,6 @@ python analysis.py
 
 ---
 
-## 📸 Screenshots
-
-All charts and outputs are available in the **screenshots** folder.
-
----
-
 ## 📈 Key Insights
 
 * Laptops generate the highest revenue among all products
